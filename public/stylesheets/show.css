@@ -1,0 +1,189 @@
+body {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.1);
+  padding: 36px 28px;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all direct children horizontally */
+}
+
+/* Align comments to the left */
+.well {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align comments to the left */
+  position: relative;
+}
+
+/* Each comment row left-aligned */
+.row .col-md-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+/* Leave Comment button on top right */
+.leave-comment-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+}
+
+/* Optional: Add some spacing for the button if needed */
+@media (max-width: 900px) {
+  .well {
+    padding: 16px 6px;
+  }
+  .leave-comment-btn {
+    top: 12px;
+    right: 12px;
+  }
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the card row */
+}
+
+.col-md-9 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the card */
+  width: 100%;
+}
+.temp1{
+  font-size: 25px /* 1.5x of 1.15rem ≈ 1.725rem */
+}
+
+.thumbnail {
+  width: 100%;
+  max-width: 700px;
+  min-height: 500px;   /* Increased from 400px */
+  /* height: 560px;       Increased from 480px */
+  /* max-height: 2000px; Prevents overflow */
+  margin: 0 auto 32px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: 0;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.caption-full {
+  padding: 24px 28px;
+  width: 100%;
+  text-align: left;
+}
+.majhi{
+  display: flex;
+  margin-top: 10px;
+}
+.caption-full h4 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.caption-full p {
+  color: #444;
+  font-size: 1.15rem;
+}
+
+.btn-warning,
+.btn-danger,
+.btn-success {
+  font-weight: bold;
+  border-radius: 8px;
+  margin-right: 8px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-warning {
+  background: #ffb347;
+  border: none;
+  color: #fff;
+}
+
+.btn-warning:hover {
+  background: #ffa500;
+}
+
+.btn-danger {
+  background: #ff5e62;
+  border: none;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #e53935;
+}
+
+.btn-success {
+  background: #43e97b;
+  border: none;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background: #38b764;
+}
+
+@media (max-width: 900px) {
+  .thumbnail {
+    max-width: 100%;
+    height: auto;
+  }
+  .caption-full {
+    padding: 16px 8px;
+  }
+}
+/* Add spacing between Edit and Delete buttons on campground card and comments */
+.caption-full .btn-warning,
+.caption-full .btn-danger,
+.col-md-12 .btn-warning,
+.col-md-12 .btn-danger {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+/* Remove right margin for the last button in a group */
+.caption-full form:last-child .btn-danger,
+.col-md-12 form:last-child .btn-danger {
+  margin-right: 0;
+}

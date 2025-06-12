@@ -1,0 +1,68 @@
+<%- include ("../partials/header") %>
+<!-- Add Google Fonts link -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700|Playfair+Display:700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stylesheets/main.css">
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1 
+                style="
+                    font-family: 'Playfair Display', 'Montserrat', serif;
+                    font-size: 5rem;
+                    font-weight: 700;
+                    color: #2d3a4b;
+                    text-shadow: 1px 2px 8px rgba(0,0,0,0.08);
+                    letter-spacing: 2px;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                "
+            >
+                Welcome to <span style="color:#388e3c;">Natural Pursuits</span>
+            </h1>
+                        <p 
+                style="
+                    font-family: 'Montserrat', 'Arial', sans-serif;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: #46637f;
+                    margin-bottom: 18px;
+                    letter-spacing: 1px;
+                    line-height: 1.6;
+                    background: rgba(240,248,255,0.7);
+                    border-radius: 10px;
+                    padding: 18px 28px;
+                    box-shadow: 0 2px 12px rgba(56,142,60,0.07);
+                    display: inline-block;
+                "
+            >
+                Discover breathtaking landscapes, hidden gems, and serene escapes.<br>
+                Dive into a curated collection of the world’s most stunning natural destinations—<b>perfect for your next adventure.</b>
+            </p>
+            <p style="margin-left: 20px;">
+                <a class="btn btn-primary btn-lg " type="button" href="/campgrounds/new"> Add New</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="row text-center" style="display:flex;flex-wrap: wrap;">
+
+        <% campgrounds.forEach(function(campground){%>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <img src="<%=campground.image%>">
+                <div class="caption">
+                    <h4> <%= campground.name %> </h4>
+                </div>
+                <p>
+                    <a href="/campgrounds/<%=campground._id%>" class="btn btn-primary">More Info</a>
+                </p>
+            </div>
+        </div>
+
+
+        <%})%>
+
+    </div>
+</div>
+<%- include ("../partials/footer") %>

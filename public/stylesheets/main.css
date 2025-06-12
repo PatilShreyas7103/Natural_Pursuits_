@@ -1,0 +1,55 @@
+.thumbnail {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+/* .navbar-brand span {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #111 !important;
+} */
+.navbar-nav > li > a,
+.navbar-brand,
+.navbar-text {
+  color: #111 !important;
+}
+.thumbnail img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.caption {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.caption h4 {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(56, 142, 60, 0.08);
+}
+
+body {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}

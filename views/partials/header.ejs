@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../public/stylesheets/main.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn-icons-png.flaticon.com/512/11804/11804260.png"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">
+            <img
+              src="/favicon%20natural.png"
+              alt="Logo"
+              style="height: 24px; margin-right: 8px; display: inline"
+            />
+            <span style="color: black; font-weight: 900;"> Natural Pursuits </span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar">
+            <li>
+              <a style="color: black;" href="/campgrounds">Home</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <% if(!currentUser){ %>
+            <li><a style="color: black;" href="/login"> Login</a></li>
+            <li><a style="color: black;" href="/register"> SignUp</a></li>
+
+            <% }else{ %>
+            <li><a style="color: black;" href="">Signed In As <%=currentUser.username %></a></li>
+            <li><a style="color: black;" href="/logout"> Logout</a></li>
+
+            <%}%>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <%if(error && error.length >0){%>
+    <div class="container">
+      <div class="alert alert-danger" role="alert"><%= error %></div>
+    </div>
+
+    <%} %> <% if(success && success.length >0){ %>
+    <div class="container">
+      <div class="alert alert-success" role="alert"><%= success %></div>
+    </div>
+    <%}%>
+  </body>
+</html>
